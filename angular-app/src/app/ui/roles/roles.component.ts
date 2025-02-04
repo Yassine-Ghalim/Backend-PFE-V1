@@ -7,13 +7,13 @@ import {HttpClient} from '@angular/common/http'; // <-- Ajoutez cette ligne
   styleUrl: './roles.component.css'
 })
 export class RolesComponent implements OnInit{
-  public Roles : any;
+  public roles : any;
   constructor(private http : HttpClient) {
   }
   ngOnInit(){
     this.http.get("http://localhost:8090/api/roles").subscribe({
       next : data=>{
-        this.Roles=data;
+        this.roles=data;
       },
       error : err => {
         console.log(err);

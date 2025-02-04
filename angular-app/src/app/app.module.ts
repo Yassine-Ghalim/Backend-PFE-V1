@@ -3,17 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RolesComponent } from './ui/roles/roles.component';
 import { CustomersComponent } from './ui/customers/customers.component';
-import { HttpClientModule } from '@angular/common/http';
-import {KeycloakService, provideKeycloak} from 'keycloak-angular';
-
+import {HttpClientModule} from "@angular/common/http";
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
+import {RolesComponent} from './ui/roles/roles.component';
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        url: 'http://192.168.116.142/:8080',
+        url: 'http://192.168.116.142:8080',
         realm: 'bdcc-realm',
         clientId: 'auth-service'
       },
@@ -27,14 +26,11 @@ function initializeKeycloak(keycloak: KeycloakService) {
 @NgModule({
   declarations: [
     AppComponent,
-    RolesComponent,
     CustomersComponent,
-
-  ],
+    RolesComponent  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    AppRoutingModule, HttpClientModule, KeycloakAngularModule
   ],
   providers: [
     {provide : APP_INITIALIZER, useFactory : initializeKeycloak, multi :true, deps : [KeycloakService]}

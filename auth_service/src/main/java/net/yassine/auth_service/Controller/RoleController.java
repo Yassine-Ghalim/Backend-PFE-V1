@@ -23,14 +23,12 @@ public class RoleController {
 
   // Get all roles
   @GetMapping("/roles")
-  @PreAuthorize("hasAuthority('ADMIN')")
   public ResponseEntity<List<Role>> getAllRoles() {
     return ResponseEntity.ok(roleRepository.findAll());
   }
 
   // Get role by ID
   @GetMapping("/roles/{id}")
-  @PreAuthorize("hasAuthority('USER')")
   public Role productById(@PathVariable Long id){
     return roleRepository.findById(id).get();
   }

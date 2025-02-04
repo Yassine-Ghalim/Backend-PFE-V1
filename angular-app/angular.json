@@ -5,17 +5,7 @@
   "projects": {
     "angular-app": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -40,9 +30,7 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
-            ]
+            "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.js"]
           },
           "configurations": {
             "production": {
@@ -107,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "0eb06955-d652-4f86-8fdd-1c17ea8d487f"
+    "analytics": "e9347d05-b19e-4911-b324-30a41fadd199"
   }
 }

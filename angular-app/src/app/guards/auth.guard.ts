@@ -11,15 +11,15 @@ import { KeycloakAuthGuard, KeycloakService } from 'keycloak-angular';
 })
 export class AuthGuard extends KeycloakAuthGuard {
   constructor(
-    protected override readonly router: Router,
-    protected readonly keycloak: KeycloakService
+      protected override readonly router: Router,
+      protected readonly keycloak: KeycloakService
   ) {
     super(router, keycloak);
   }
 
   public async isAccessAllowed(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
   ) {
     // Force the user to log in if currently unauthenticated.
     if (!this.authenticated) {

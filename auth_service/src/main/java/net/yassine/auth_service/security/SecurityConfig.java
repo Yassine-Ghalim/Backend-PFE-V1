@@ -35,7 +35,7 @@ public class SecurityConfig {
       .headers(h->h.frameOptions(fo->fo.disable()))
       .authorizeHttpRequests(ar -> ar
         .requestMatchers("/h2-console/**").permitAll() // Accès libre aux API
-        //.requestMatchers("/api/roles/**").hasAuthority("ADMIN")
+        .requestMatchers("/api/roles/**").hasAuthority("ADMIN")
               .anyRequest().authenticated()) // Authentification pour les autres requête
       .oauth2ResourceServer(o2->o2.jwt(jwt->jwt.jwtAuthenticationConverter(jwtAuthConverter)))
       .build();
