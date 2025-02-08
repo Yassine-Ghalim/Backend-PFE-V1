@@ -29,7 +29,7 @@ public class SecurityConfig {
     @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     return http
-       .cors(Customizer.withDefaults())
+      .cors(Customizer.withDefaults())
       .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Utilisation d'une gestion de session sans état
       .csrf(csrf -> csrf.disable()) // Désactivation de CSRF pour les API stateless
       .headers(h->h.frameOptions(fo->fo.disable()))

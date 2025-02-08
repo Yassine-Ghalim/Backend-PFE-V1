@@ -1,0 +1,52 @@
+/* Navbar */
+.navbar {
+  background-color: #002B3F !important; /* Bleu foncé */
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Liens de la navbar */
+.navbar .nav-link {
+  color: #D8D2B0 !important; /* Beige clair */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+/* Bouton de connexion */
+.btn-login {
+  background-color: #D8D2B0 !important; /* Beige clair */
+  color: #002B3F !important; /* Bleu foncé */
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  background-color: white !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: #D8D2B0 !important; /* Beige clair */
+  border: none;
+}
+
+.dropdown-item {
+  color: #002B3F !important;
+}
+
+.dropdown-item:hover {
+  background-color: #002B3F !important;
+  color: white !important;
+}
+
+
+/* Appliquer le background à toute la zone du router-outlet */
+router-outlet + * {
+  background-color: #EED9C4 !important;
+  min-height: 100vh; /* Assure que le fond couvre toute la page */
+  padding: 20px; /* Ajoute un peu d’espace */
+}

@@ -1,0 +1,39 @@
+.login-pf body {
+    background: url("../img/keycloak-bg.png") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--pf-global--primary-color--light-200);
+    margin: 0;
+
+}
+
+
+
+#kc-header-wrapper {
+    color: var(--pf-global--primary-color--100);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+:root {
+    /* Définition des couleurs principales en marron */
+    --pf-global--primary-color--100: #8B4513; /* Base Brown */
+    --pf-global--primary-color--200: #A0522D; /* Darker Brown */
+    --pf-global--primary-color--300: #D2691E; /* Even Darker Brown */
+    --pf-global--primary-color--400: #704214; /* Darkest Brown */
+    --pf-global--primary-color--light-100: #C4A484; /* Light Brown */
+    --pf-global--primary-color--light-200: #EED9C4; /* Lightest Brown */
+
+    /* Définition des couleurs des boutons */
+    --pf-c-button--m-primary--BackgroundColor: var(--pf-global--primary-color--100);
+    --pf-c-button--m-primary--hover--BackgroundColor: var(--pf-global--primary-color--200);
+    --pf-c-button--m-primary--active--BackgroundColor: var(--pf-global--primary-color--300);
+    --pf-c-button--m-primary--Color: #ffffff; /* Texte blanc pour les boutons */
+}
